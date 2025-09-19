@@ -7,13 +7,13 @@ router.post("/create", (req, res, next) => {
   const { title, details, createdAt } = req.body;
 
   Entry
-    .find(
-      { title: Entry.title === title }
+    .findOne(
+      { title: title }
     )
     .exec()
     .then(results => {
-      if (results.length > 0) {
-        return res.status(401).json({
+      if (results) {
+        return res.status(409).json({
           message: "Title Already Exists"
         });
       };
@@ -28,7 +28,7 @@ router.post("/create", (req, res, next) => {
       newEntry
         .save()
         .then(result => {
-          res.status(200).json({
+          return res.status(200).json({
             message: "Entry Saved Successfully",
           });
         })
@@ -50,6 +50,7 @@ router.post("/create", (req, res, next) => {
 
 router.get("/entries", (req, res, next) => {
   Entry
+    .find()
     .exec()
     .then(results => {
       console.log(results)
@@ -64,5 +65,31 @@ router.get("/entries", (req, res, next) => {
       });
     });
 });
+
+router.delete("/:id", (req, res, next) => {
+  const entryId = req.params.id;
+  
+  Entry
+    .findByIdAndDelete({ _id: entryId})
+    .exec()
+    .then(result => {
+      if (!result) {
+        return res.status(404).json({
+          message: "Entry Not Found",
+        });
+      };
+
+      return res.status(200).json({
+        message: "Entry Deleted Successfully",
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(err.status || 500).json({
+        message: err.message,
+      });
+    });
+});
+
 
 module.exports = router;
