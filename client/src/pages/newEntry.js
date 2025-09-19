@@ -71,7 +71,7 @@ export default function NewEntry() {
       console.error(err);
 
       return handleErrorSuccess(
-        err.message,
+        err.response?.data?.message,
         true,
       );
     };
