@@ -1,0 +1,36 @@
+{
+  "name": "address-book-server",
+  "version": "1.0.0",
+  "description": "an express + mondo db server for the address book client",
+  "homepage": "https://github.com/mek0124/AddressBook#readme",
+  "bugs": {
+    "url": "https://github.com/mek0124/AddressBook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mek0124/AddressBook.git"
+  },
+  "license": "MIT",
+  "author": "mek0124",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

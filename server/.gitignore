@@ -1,0 +1,5 @@
+node_modules/
+public/app-tab-icon.png
+public/loading/app-icon.png
+src/assets/app.ico
+.env
