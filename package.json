@@ -1,0 +1,25 @@
+{
+  "name": "diary",
+  "version": "1.0.0",
+  "description": "a light-weight diary application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mek0124/diary-desktop.git"
+  },
+  "author": "mek0124",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/mek0124/diary-desktop/issues"
+  },
+  "homepage": "https://github.com/mek0124/diary-desktop#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
