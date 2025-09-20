@@ -7,7 +7,6 @@ export default function SideNavigation() {
     { path: "/", label: "Dashboard" },
     { path: "/new-entry", label: "New Entry" },
     { path: "/history", label: "My Entries" },
-    { path: "/settings", label: "Settings" },
     { path: "/support", label: "Support" },
   ];
 
