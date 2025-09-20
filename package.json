@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "project_setup": "concurrently \"npm run install_client\" \"npm run install_server\" ",
+    "install_root": "npm install",
+    "install_client": "cd client && npm install",
+    "install_server": "cd server && npm install",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "server": "cd server && npm run dev",
     "client": "cd client && npm start"
