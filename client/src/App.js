@@ -6,7 +6,6 @@ import SideNavigation from './components/sideNavigation';
 import Landing from './pages/landing';
 import NewEntry from "./pages/newEntry";
 import History from "./pages/history";
-import Settings from "./pages/settings";
 import Support from "./pages/support";
 
 
@@ -21,7 +20,6 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/new-entry" element={<NewEntry />} />
           <Route path="/history" element={<History/>} />
-          <Route path="/settings" element={<Settings />} />
           <Route path="/support" element={<Support />} />
         </Routes>
       </div>
