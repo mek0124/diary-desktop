@@ -47,7 +47,6 @@ router.post("/create", (req, res, next) => {
     });
 });
 
-
 router.get("/entries", (req, res, next) => {
   Entry
     .find()
